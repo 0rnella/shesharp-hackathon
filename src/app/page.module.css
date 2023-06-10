@@ -53,8 +53,9 @@
 /* .logo-img{
   background-color: black;
 } */
-.banner p{
-  margin-top: 20px;
+.banner h1{
+  margin-bottom: 20px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .input-box {
@@ -72,7 +73,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  width: 100px;
+  width: 150px;
   margin-left: 3px;
   color:pink;
   font-weight: bold;

@@ -81,7 +81,7 @@ export default function Home() {
 
       <div className={styles["banner-container"]}>
         <div className={styles.banner}>
-          <h1>We help you make job posts better</h1>
+          <h1>Looking for a BRO or looking for a PRO?</h1>
           <p></p>
           {sourceStackJob ? (
             <JobAnalysis sourceStackJob={sourceStackJob} />
