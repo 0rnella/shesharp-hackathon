@@ -32,7 +32,7 @@ async function getAiResponse(prompt) {
 }
 
 export default async function handler(req, res) {
-  const prompt =
+  const backupPrompt =
     "What Youll Do : Contribute to the design and development of new cloud-based software architectures \
   Own and deliver complete features, including design, architecture, implementation, testability and deployment \
   Design and contribute to APIs that can support user experiences on web and mobile applications \
@@ -48,6 +48,10 @@ export default async function handler(req, res) {
   Familiar with client-side frameworks, such as Next.js, Vue.js or React. \
   Proficient at using appropriate security, testing, documentation, and/or monitoring best practices \
   Familiar with Agile/Scrum methodologies";
+
+  const {description} = req.body;
+
+  const prompt = description || backupPrompt;
 
   const aiResponse = await getAiResponse(prompt);
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 export default function PageWithJSbasedForm() {
   const [aiResponse, setAiResponse] = useState();
   // Handles the submit event on form submit.
+  let chatResponse;
   const handleSubmit = async (event) => {
     // Stop the form from submitting and refreshing the page.
     event.preventDefault();
