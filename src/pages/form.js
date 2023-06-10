@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../app/page.module.css";
 import "../app/globals.css";
 
@@ -67,7 +68,6 @@ export default function PageWithJSbasedForm() {
 
         <div className={styles["banner-container"]}>
           <div className={styles.banner}>
-
             <h1>Submit your job description</h1>
             <form onSubmit={handleSubmit}>
               <input
@@ -77,11 +77,9 @@ export default function PageWithJSbasedForm() {
                 placeholder="Put your job description here..."
                 className={styles["input-box"]}
                 required
-                />
+              />
 
-              <button
-              type="submit"
-              className={styles["submit-btn"]}>
+              <button type="submit" className={styles["submit-btn"]}>
                 Submit
               </button>
             </form>
@@ -171,9 +169,19 @@ export default function PageWithJSbasedForm() {
                 __html: aiResponse.replaceAll("\n", "<br/>"),
               }}
             ></p>
+            <br></br>
+            <Link
+              style={{
+                textDecoration: "underline",
+                fontWeight: "bold",
+                fontSize: "1.2rem",
+              }}
+              href="/about"
+            >
+              Wanna know more?
+            </Link>
           </div>
         </div>
-
       </main>
     );
   };
