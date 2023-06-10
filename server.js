@@ -1,7 +1,16 @@
 const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
- 
+require('dotenv').config();
+
+const apiKey = process.env.OPENAI_API_KEY;
+
+const { Configuration, OpenAIApi } = require("openai");
+const configuration = new Configuration({
+  apiKey
+});
+const openai = new OpenAIApi(configuration);
+
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'localhost'
 const port = 3000
@@ -17,9 +26,18 @@ app.prepare().then(() => {
       const parsedUrl = parse(req.url, true)
       const { pathname, query } = parsedUrl
  
-      if (pathname === '/a') {
-        await app.render(req, res, '/a', query)
-      } else if (pathname === '/b') {
+    if (pathname === '/chat') {
+        const prompt = 'hello'
+
+        // Generate a response with ChatGPT
+        const completion = await openai.createCompletion({
+            model: "text-davinci-002",
+            prompt: prompt,
+            max_tokens: 100,
+        });
+        await app.render(req, res, '/chat')
+        console.log('the response', completion.data.choices[0].text)
+    } else if (pathname === '/b') {
         await app.render(req, res, '/b', query)
       } else {
         await handle(req, res, parsedUrl)
