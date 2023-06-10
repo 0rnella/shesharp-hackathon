@@ -32,7 +32,7 @@ export default function Home() {
               className={styles.vercelLogo}
               width={100}
               height={60}
-              // margin-bottom={-20}
+              margin-bottom={0}
               priority
             />
           </a>
@@ -50,9 +50,8 @@ export default function Home() {
             priority
           /> */}
           <h1>We help you make job posts better</h1>
-          <p>
+          <p></p>
           <InputBox />
-        </p>
         </div>
       </div>
 
