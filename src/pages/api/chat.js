@@ -49,9 +49,7 @@ export default async function handler(req, res) {
   Proficient at using appropriate security, testing, documentation, and/or monitoring best practices \
   Familiar with Agile/Scrum methodologies";
 
-  console.log("prompt:", prompt);
   const aiResponse = await getAiResponse(prompt);
-  console.log("response:", aiResponse);
 
   res.status(200).json(aiResponse);
 }
