@@ -37,22 +37,43 @@ export default function Home() {
     return (
       <div>
         <p>SourceStack has analyzed your job and found the following:</p>
-        <h2>Title: {sourceStackJob['job_name']}</h2>
-        <p> <b>{tagsMatched.length} matched tags:</b> {tagsMatched.join(', ')}</p>
-
-          {tagsMatched.length > 3 && (
-            <span>That's a lot of technologies. Are you sure you need all them? If not, consider removing the keywords.</span>
-          )}
-          <p> <b>{categories.length} matched categories:</b> {categories.join(', ')}</p>
+        <br />
+        <h2>Title: {sourceStackJob["job_name"]}</h2>
+        <br />
+        <br />
         <p>
-          {categories.length > 3 && (
-            <span>That's a lot of categories. Are you sure you need all them? If not, consider removing the keywords.</span>
+          <b>{tagsMatched.length} matched skills:</b> {tagsMatched.join(", ")}
+        </p>
+        <p className={styles.opinion}>
+          {tagsMatched.length > 3 ? (
+            <span>
+              That's a lot of skills. Are you sure you need all of them? If not,
+              consider removing the keywords.
+            </span>
+          ) : (
+            <span>Good job, that's a reasonable number of skills.</span>
           )}
         </p>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <br />
+        <br />
+        <p>
+          <b>{categories.length} matched categories:</b> {categories.join(", ")}
+        </p>
+
+        <p className={styles.opinion}>
+          {categories.length > 3 ? (
+            <span>
+              That's a lot of categories. Are you sure you need all of them? If
+              not, consider removing the keywords.
+            </span>
+          ) : (
+            <span>Good job, that's a reasonable number of categories.</span>
+          )}
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
         <Link
         className={styles.btn}
         href="/form">
@@ -83,12 +104,14 @@ export default function Home() {
 
       <div className={styles["banner-container"]}>
         <div className={styles.banner}>
-          <h1>Looking for a BRO or looking for a PRO?</h1>
           <p></p>
           {sourceStackJob ? (
             <JobAnalysis sourceStackJob={sourceStackJob} />
           ) : (
-            <InputBox handleSubmit={handleSubmit} />
+            <>
+              <h1>Looking for a BRO or looking for a PRO?</h1>
+              <InputBox handleSubmit={handleSubmit} />
+            </>
           )}
         </div>
       </div>
