@@ -25,7 +25,7 @@ async function getAiResponse(prompt) {
   const completion = await openai.createCompletion({
     model: "text-davinci-002",
     prompt: text,
-    max_tokens: 100,
+    max_tokens: 3000,
   });
   const textResponse = completion.data.choices[0].text;
   return textResponse;
