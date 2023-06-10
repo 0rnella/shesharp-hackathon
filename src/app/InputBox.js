@@ -10,12 +10,12 @@ const InputBox = ({handleSubmit}) => {
         name='url'
         // onChange={handleInputChange}
         className={styles["input-box"]}
-        placeholder="Please your URL here..."
+        placeholder="Please put your URL here..."
       />
       <button
       type="submit"
       className={styles["submit-btn"]}>
-        Check it!
+        Check it out!
         </button>
     </form>
   );

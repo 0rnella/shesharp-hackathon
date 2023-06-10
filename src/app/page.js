@@ -53,7 +53,9 @@ export default function Home() {
         <br/>
         <br/>
         <br/>
-        <Link href="/form">
+        <Link
+        className={styles.btn}
+        href="/form">
           Let's go further. Make your posting better with AI!
         </Link>
       </div>

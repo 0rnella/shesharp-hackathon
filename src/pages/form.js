@@ -171,11 +171,12 @@ export default function PageWithJSbasedForm() {
             ></p>
             <br></br>
             <Link
-              style={{
-                textDecoration: "underline",
-                fontWeight: "bold",
-                fontSize: "1.2rem",
-              }}
+              // style={{
+              //   textDecoration: "underline",
+              //   fontWeight: "bold",
+              //   fontSize: "1.2rem",
+              // }}
+              className={styles.btn}
               href="/about"
             >
               Wanna know more?

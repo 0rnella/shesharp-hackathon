@@ -46,7 +46,7 @@
   background-position: center;
   /* height: 500px; */
   text-align: center;
-  padding: 150px 0;
+  padding: 150px;
   /* height: 400px; */
 }
 
@@ -73,11 +73,23 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  width: 150px;
+  /* width: 150px; */
   margin-left: 3px;
   color:pink;
   font-weight: bold;
   background-color: black ;
+}
+
+.btn {
+  background-color: black ;
+  color:pink;
+  text-decoration: none;
+  padding: 10px;
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .code {
   font-weight: 700;
