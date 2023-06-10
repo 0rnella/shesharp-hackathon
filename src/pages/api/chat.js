@@ -49,7 +49,7 @@ export default async function handler(req, res) {
   Proficient at using appropriate security, testing, documentation, and/or monitoring best practices \
   Familiar with Agile/Scrum methodologies";
 
-  const {description} = req.body;
+  const { description } = req.body;
 
   const prompt = description || backupPrompt;
 
