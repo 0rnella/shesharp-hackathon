@@ -42,7 +42,7 @@ const InputBox = () => {
       <button
       type="submit"
       className={styles["submit-btn"]}>
-        Submit
+        Check it!
         </button>
     </form>
   );
