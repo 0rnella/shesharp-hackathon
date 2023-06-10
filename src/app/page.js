@@ -32,7 +32,7 @@ export default function Home() {
               className={styles.vercelLogo}
               width={100}
               height={60}
-              margin-bottom={0}
+              // margin-bottom={-20}
               priority
             />
           </a>
