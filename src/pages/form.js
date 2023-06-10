@@ -70,7 +70,7 @@ export default function PageWithJSbasedForm() {
           <div className={styles.banner}>
             <h1>Submit your job description</h1>
             <form onSubmit={handleSubmit}>
-              <input
+              <textarea
                 type="text"
                 id="description"
                 name="description"
@@ -78,8 +78,8 @@ export default function PageWithJSbasedForm() {
                 className={styles["input-box"]}
                 required
               />
-
-              <button type="submit" className={styles["submit-btn"]}>
+              <br/>
+              <button type="submit" className={styles["submit-btn"]} style={{marginTop: '10px'}}>
                 Submit
               </button>
             </form>
